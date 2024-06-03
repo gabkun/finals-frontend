@@ -1,0 +1,42 @@
+
+<div class="bg-gray-100 flex flex-col lg:flex-row justify-center items-center h-screen">
+  <!-- Left: Login Form -->
+  <div class="lg:p-36 md:p-52 sm:p-20 p-8 w-full lg:w-1/2">
+    <h1 class="text-2xl font-semibold mb-4">Sign Up for an Account</h1>
+    <form [formGroup]="signupForm" (ngSubmit)="signup()">
+      <div class="mb-4">
+        <label for="lname" class="block text-gray-600">Last Name</label>
+        <input type="text" id="lname" name="lname" formControlName="lname" class="w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:border-blue-500" autocomplete="off">
+      </div>
+      <div class="mb-4">
+        <label for="fname" class="block text-gray-600">First Name</label>
+        <input type="text" id="fname" formControlName="fname" class="w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:border-blue-500" autocomplete="off">
+      </div>
+      <!-- Username Input -->
+      <div class="mb-4">
+        <label for="username" class="block text-gray-600">Username</label>
+        <input type="text" id="username" formControlName="username" class="w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:border-blue-500" autocomplete="off">
+      </div>
+      <div class="mb-4">
+        <label for="email" class="block text-gray-600">Email</label>
+        <input type="text" id="email" formControlName="email" class="w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:border-blue-500" autocomplete="off">
+      </div>
+      <!-- Password Input -->
+      <div class="mb-4">
+        <label for="password" class="block text-gray-600">Password</label>
+        <input type="password" id="password" formControlName="password" class="w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:border-blue-500" autocomplete="off">
+      </div>
+
+      <!-- Login Button -->
+      <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-md py-2 px-4 w-full">Sign-up</button>
+    </form>
+    <!-- Sign up Link -->
+    <div class="mt-6 text-blue-500 text-center">
+      <a href="/login" class="hover:underline">Have Account? Login Here</a>
+    </div>
+  </div>
+  <!-- Right: Image -->
+  <div class="w-full lg:w-1/2">
+    <img src="../../assets/signup.png" alt="Placeholder Image" class="object-cover w-full h-full">
+  </div>
+</div>
